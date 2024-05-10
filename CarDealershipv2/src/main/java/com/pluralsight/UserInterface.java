@@ -4,13 +4,13 @@ import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
-    // Initalize the scanner.
+    // Initialize the scanner.
     static Scanner scanner = new Scanner(System.in);
 
     // Create the variables.
     public Dealership dealership;
     public int choice;
-    public DealershipFileManager dealershipFileManager;
+    private DealershipFileManager dealershipFileManager;
     public List<Vehicle> vehicles;
     public List<Vehicle> vehiclesByYear;
     public List<Vehicle> vehiclesByColor;
@@ -62,7 +62,7 @@ public class UserInterface {
                         processGetByColorRequest();
                         break;
                     case 5:
-                        processGetByMilageRequest();
+                        processGetByMileageRequest();
                         break;
                     case 6:
                         processGetByVehicleTypeRequest();
@@ -92,7 +92,7 @@ public class UserInterface {
 
     // Create the private init method.
     private void init() {
-        // Initalize the variable.
+        // Initialize the variable.
         dealershipFileManager = new DealershipFileManager();
         this.dealership = dealershipFileManager.getDealership();
     }
@@ -110,7 +110,7 @@ public class UserInterface {
 
     // Create the processGetAllVehiclesRequest method.
     public void processGetAllVehiclesRequest() {
-        // Initalize the variable.
+        // Initialize the variable.
         vehicles = dealership.getAllVehicles();
         displayVehicles(vehicles);
     }
@@ -276,8 +276,8 @@ public class UserInterface {
         }
     }
 
-    // Create the processGetByMilageRequest method.
-    public void processGetByMilageRequest() {
+    // Create the processGetByMileageRequest method.
+    public void processGetByMileageRequest() {
         // Create the variables.
         int minMileage = 0;
         int maxMileage = 0;

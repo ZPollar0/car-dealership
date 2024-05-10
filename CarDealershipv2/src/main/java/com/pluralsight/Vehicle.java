@@ -8,9 +8,9 @@ public class Vehicle {
     private String vehicleType;
     private String color;
     private int odometer;
-    private int price;
+    private double price;
 
-    public Vehicle(int vin, int year, String make, String model, String vehicleType, String color, int odometer, int price) {
+    public Vehicle(int vin, int year, String make, String model, String vehicleType, String color, int odometer, double price) {
         this.vin = vin;
         this.year = year;
         this.make = make;
@@ -49,7 +49,7 @@ public class Vehicle {
         return color;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
