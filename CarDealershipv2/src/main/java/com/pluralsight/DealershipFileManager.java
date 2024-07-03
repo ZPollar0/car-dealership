@@ -28,7 +28,7 @@ class DealershipFileManager {
 
     public Dealership getDealership() {
         dealership = null;
-        try (BufferedReader reader = new BufferedReader(new FileReader(INVENTORY_FILE_PATH))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("inventory.csv"))) {
             String line;
             // Read the first line to get dealership information.
             dealershipInfo = reader.readLine().split("\\|");
